@@ -1,0 +1,13 @@
+
+.node {
+  width: 80px;
+  height: 25px;
+  background-color: #aaa;
+  border-radius: 0.1em;
+  margin: 0;
+  text-align: center;
+}
+
+.selected {
+  border: 1px solid yellow;
+}
