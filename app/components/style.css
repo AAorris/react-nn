@@ -6,16 +6,27 @@
   flex-direction: column;
 }
 
-.graphContainer {
+.graph.container {
   flex: 1;
   display: flex;
   flex-direction: row;
 }
 
+.resizeable {
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+}
+
+.spacer {
+  width: 15px;
+  height: 100%;
+  background-color: #181818;
+}
+
 .flex
 {
   display: flex;
-  border: 2px solid black;
 }
 
 .flex div
@@ -30,6 +41,10 @@
 
 .viewer {
   flex: 1;
+  background-color: #222;
+  border-bottom: 10px solid #181818;
+  color: #aaa;
+  font-size: 24pt;
 }
 
 .properties {
