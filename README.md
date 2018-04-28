@@ -1,7 +1,7 @@
 # react-nn
 neural network visualization and interaction using react
 
-<img width="1494" alt="screen shot 2018-04-26 at 10 18 37 pm" src="https://user-images.githubusercontent.com/1831213/39345855-d82c3bce-499f-11e8-83b3-0a9883c70284.png">
+<img width="1113" alt="screen shot 2018-04-27 at 11 03 42 pm" src="https://user-images.githubusercontent.com/1831213/39392696-57013d76-4a6f-11e8-90e6-7787b5ec2755.png">
 
 
 ## Getting started
