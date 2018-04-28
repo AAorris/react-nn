@@ -8,13 +8,27 @@ class NodeGraph extends React.Component {
     super(props);
     this.onToggleNode = this.onToggleNode.bind(this);
     this.renderNodes = this.renderNodes.bind(this);
+    this.setNodeProperty = this.setNodeProperty.bind(this);
     this.state = {
       draw: this.renderNodes,
+      setNodeProperty: this.setNodeProperty,
       nodes: [
         {name: 'a', selected: false},
         {name: 'b', selected: false},
       ],
     };
+  }
+
+  setNodeProperty(node, property, value) {
+    const nodes = Object.assign([], this.state.nodes)
+    for (var idx = 0; idx < this.state.nodes.length; idx++) {
+      const focused = this.state.nodes[idx];
+      if (node === focused) {
+        node[property] = value;  // NOTE: not treated as immutable
+        this.setState({ nodes });  // NOTE: state change is triggered here
+        return;
+      }
+    }
   }
 
   onToggleNode(node) {

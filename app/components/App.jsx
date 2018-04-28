@@ -21,9 +21,8 @@ const App = props => {
             {graph.draw()}
           </div>
           <Resizeable>
-            <PropertiesPanel>
-              <div>Nodes</div>
-              <div><pre>{JSON.stringify(graph.nodes, null, 2)}</pre></div>
+            <PropertiesPanel setNodeProperty={graph.setNodeProperty}>
+              { graph.nodes }
             </PropertiesPanel>
           </Resizeable>
         </div>
