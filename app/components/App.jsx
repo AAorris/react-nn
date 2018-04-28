@@ -19,6 +19,7 @@ const App = props => {
         <div className={'graph container'}>
           <div className={`graph flex`}>
             {graph.draw()}
+            <div><button onClick={graph.add}>+</button></div>
           </div>
           <Resizeable>
             <PropertiesPanel setNodeProperty={graph.setNodeProperty}>

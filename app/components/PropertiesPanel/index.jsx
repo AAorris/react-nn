@@ -7,7 +7,9 @@ class PropertiesPanel extends React.Component {
     }
     return (
       <div>{
-        this.props.children.map((node, idx) => {
+        this.props.children
+        .filter(node => node.selected)
+        .map((node, idx) => {
           return (
             <div>
               {( () => (idx > 0) ? (<div>--------</div>) : null )()}
@@ -16,6 +18,13 @@ class PropertiesPanel extends React.Component {
                 <input
                   value={node.name}
                   onChange={e => this.props.setNodeProperty(node, 'name', e.target.value)}
+                />
+                <input
+                  type='range'
+                  min='1'
+                  max='10'
+                  value={node.n}
+                  onChange={e => this.props.setNodeProperty(node, 'n', parseInt(e.target.value))}
                 />
               </div>
               <div>

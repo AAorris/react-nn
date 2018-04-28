@@ -9,12 +9,15 @@ class NodeGraph extends React.Component {
     this.onToggleNode = this.onToggleNode.bind(this);
     this.renderNodes = this.renderNodes.bind(this);
     this.setNodeProperty = this.setNodeProperty.bind(this);
+    this.addNode = this.addNode.bind(this);
     this.state = {
       draw: this.renderNodes,
+      add: this.addNode,
       setNodeProperty: this.setNodeProperty,
       nodes: [
-        {name: 'a', selected: false},
-        {name: 'b', selected: false},
+        {name: 'input', n: 2},
+        {name: 'h0', n: 6},
+        {name: 'h1', n: 4},
       ],
     };
   }
@@ -51,6 +54,15 @@ class NodeGraph extends React.Component {
         onClick={e => this.onToggleNode(node) }
       />
     ));
+  }
+
+  addNode(data) {
+    let userData = data || {};
+    this.setState({
+      nodes: this.state.nodes.concat([
+        Object.assign({}, {selected: true, n: 3, name: `Layer${this.state.nodes.length + 1}`}, userData)
+      ])
+    })
   }
 
   render() {

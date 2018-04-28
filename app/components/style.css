@@ -12,6 +12,15 @@
   flex-direction: row;
 }
 
+.row {
+  flex-direction: column;
+}
+
+.space-around {
+  justify-content: space-around;
+  flex: 1;
+}
+
 .resizeable {
   width: 35%;
   display: flex;
@@ -44,7 +53,7 @@
   background-color: #222;
   border-bottom: 10px solid #181818;
   color: #aaa;
-  font-size: 24pt;
+  font-size: 12pt;
 }
 
 .properties {
