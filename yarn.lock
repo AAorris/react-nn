@@ -524,6 +524,10 @@ react-dom@^16.3.2:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
+react-json-renderer@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/react-json-renderer/-/react-json-renderer-0.6.0.tgz#8f44a42755fe7d050f1df99159abd51fffc2788b"
+
 react@^16.0.0:
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"
